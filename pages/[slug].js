@@ -3,7 +3,9 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Main from '../components/main-layout'
 import * as fs from 'fs';
-
+import path from 'path';
+import matter from 'gray-matter';
+import marked from 'marked'
 
 export default function Home() {
   return (
@@ -120,9 +122,12 @@ export const getStaticPaths = async () =>{
 }
 
 export const getStaticProps = async ({params: {slug}}) =>{
+
+  const content = fs.readFileSync(path.join('posts',`${slug}.md`)).toString()
+  console.log(content)
   return {
     props: {
-      slug
+      slug, content
     }
   }
 }
