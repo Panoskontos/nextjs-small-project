@@ -1,6 +1,7 @@
 ---
 title: Python
 slug: py
+image: py.jpeg
 ---
 
 

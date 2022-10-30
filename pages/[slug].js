@@ -16,7 +16,7 @@ export default function Post({postData, content}) {
     <header id="header">
       <div className="inner">
         {/* Logo */}
-        <a href="index.html" className="logo">
+        <a href="" className="logo">
           <span className="symbol">
             <img src="images/logo.svg" alt="" />
           </span>
@@ -58,7 +58,7 @@ export default function Post({postData, content}) {
       <div className="inner">
         <h1>{postData.title}</h1>
         <span className="image main">
-          <img src="images/pic13.jpg" alt="" />
+          <img src={"images/"+postData.image} alt="" />
         </span>
       
       <div dangerouslySetInnerHTML={{ __html: content}}></div>
